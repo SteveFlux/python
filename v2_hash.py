@@ -1,7 +1,7 @@
 import hashlib
 
 def view_hash():
-    words= input("Type the word  or sentece to see its sha-256 hash: ")
+    words= input("Type the word  or sentence to see its sha-256 hash: ")
     hash_object= hashlib.sha256(words.encode())
     hash_digest= hash_object.hexdigest()
 
@@ -21,7 +21,7 @@ def hash_file (path=None):
         return h.hexdigest()    
             
     except Exception as e:
-           print (f"Error {e} Retry again check the file path or remove the speeche marks")
+           print (f"Error {e} Retry again check the file path or remove the speech marks")
            return 
 
 
@@ -70,7 +70,7 @@ if __name__=="__main__":
     }
     online=True
     print("\n=====Choose from the menu===== \n")
-    print("1:Encrypt a text or word\n")
+    print("1:Hash a text or word\n")
     print("2:Hash  a whole file\n")
     print("3:Verify integrity between file and a sha-256 hash of it\n")
     print("4:Verify integrity between two files\n")
